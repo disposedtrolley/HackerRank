@@ -17,13 +17,10 @@ function main() {
     	// reduce value of all elements by value of smallestStick
     	for (var i = 0; i < arr.length; i++) {
     		arr[i] -= smallestStick;
-    	}
-
-    	// remove elements < 0
-    	for (var j = 0; j < arr.length; j++) {
-    		if (arr[j] <= 0) {
-    			arr.splice(j, 1);
-    			j =- 1;		// decrement j after splicing
+    		// remove stick if value <= 0
+    		if (arr[i] <= 0) {
+    			arr.splice(i, 1);
+    			i =- 1;		// decrement i after splicing
     		}
     	}
     }
